@@ -1,0 +1,30 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/new_home_finder
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      idle-timeout: 10000
+  jpa:
+    properties.hibernate:
+      jdbc.lob.non_contextual_creation: true
+      format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate.ddl-auto: update
+  jackson:
+    default-property-inclusion: non_empty
+  main:
+    allow-bean-definition-overriding: true
+bot:
+  name: new_home_finder_bot
+  token: 1229180589:AAGWWE0Sb3g0rJToKN7Ss1asGUULnzn3BtI
+  chatId: -1001496125405
+parser:
+  SCHEDULED_MIN: 999_999_999_000
+  SHOW_URLS: false
+  RUB: 70.8995
